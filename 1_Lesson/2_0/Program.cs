@@ -12,4 +12,4 @@ if (num2 == num1*num1);
 else
     {
     System.Console.WriteLine("Нет");
-   }
+    }
