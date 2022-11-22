@@ -5,14 +5,12 @@
     //a = 2 b = 10 -> max = 10
     //a = -9 b = -3 -> max = -3
 
-Console.WriteLine("Введите 1 число: ");
-var c = Console.ReadLine();
+Console.WriteLine("Введите два числа и узнайте, какое из них наибольшее: ");
+var number1 = Console.ReadLine();
+var number2 = Console.ReadLine();
 
-Console.WriteLine("Введите 2 число: ");
-var d = Console.ReadLine();
-
-int a = int.Parse(c);
-int b = int.Parse(d);
+int a = int.Parse(number1);
+int b = int.Parse(number2);
 int max = 0;
 
 if (a>b)  
