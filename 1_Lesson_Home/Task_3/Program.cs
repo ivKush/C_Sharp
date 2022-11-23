@@ -7,6 +7,7 @@
 Console.WriteLine("Введите число и узнайте четное ли оно: ");
 var number1 = Console.ReadLine();
 int a = int.Parse(number1);
+
 int b=a%2;
 if (b==0) System.Console.WriteLine("чётное");
 
