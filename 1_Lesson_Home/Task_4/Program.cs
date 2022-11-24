@@ -3,12 +3,16 @@
 //5 -> 2, 4
 //8 -> 2, 4, 6, 8
 
-Console.Write("Введите число от 1: ");
+Console.Write("Введите положительное число от 1: ");
 int N =int.Parse(Console.ReadLine());
 
 System.Console.Write("Все чётные числа: ");   
-for (int a=1, b=0; a<=N; a++) 
+for (int a=1, b=0; a<=N; a+=1) 
 {
     b=a%2;
-    if (b==0) System.Console.Write(-a);
+    if (b==0) 
+    System.Console.Write($"{a} ");
 }
+
+if (N==1) System.Console.Write("НЕТ чётных чисел");
+
