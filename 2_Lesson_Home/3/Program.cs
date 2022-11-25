@@ -15,4 +15,4 @@ while  (b>3)
     if (b==2|b==1) 
     System.Console.WriteLine("в числе нет 3-его знака");
  else  System.Console.WriteLine(a%10);
-
+ 
