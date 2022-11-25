@@ -6,13 +6,13 @@ System.Console.Write("Введите число: ");
 int a = int.Parse(Console.ReadLine());
 System.Console.Write("Введите количество цифр из которого состоит число : ");
 int b = int.Parse(Console.ReadLine());
-//   123456
+
 while  (b>3) 
     {
     a=a/10; 
     b=b-1;
     }
     if (b==2|b==1) 
-    System.Console.WriteLine("в числе нет 3 знака");
+    System.Console.WriteLine("в числе нет 3-его знака");
  else  System.Console.WriteLine(a%10);
 
