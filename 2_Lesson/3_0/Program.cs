@@ -14,5 +14,5 @@ Console.WriteLine("1 chislo");
 int first = int.Parse(Console.ReadLine());
 Console.WriteLine("2 chislo");
 int second = int.Parse(Console.ReadLine());
-Console.WriteLine(Crat(first, second));
+Console.WriteLine(crat(first, second));
 
