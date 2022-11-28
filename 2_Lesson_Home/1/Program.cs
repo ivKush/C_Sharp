@@ -5,7 +5,7 @@
 //918 -> 1
 
 int a; 
-System.Console.WriteLine(a = new Random().Next(1000));
+System.Console.WriteLine(a = new Random().Next(100,1000));
 
 double b = a / 10; 
 double c = b % 10;
