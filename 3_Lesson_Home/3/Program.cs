@@ -1,27 +1,15 @@
-﻿// 3_Lesson_Home_1
- System.Console.WriteLine("Ввведите пятизначное число");
-    var empty = Console.ReadLine();
-    int number = empty == null ? 0 : int.Parse(empty);
+﻿// Напишите программу, которая принимает на вход число (N) и 
+// выдаёт таблицу кубов чисел от 1 до N.
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
 
-string palindrome( string a)
+System.Console.WriteLine("Введите число: ");
+var empty = Console.ReadLine();
+int N = empty == null ? 0 : int.Parse(empty);
+int i=1;
+while (N>=i)
 {
-   
-    //string a;
-    if (number > 99999 || number < 10000)
-    {
-        a = "Error";
-    }
-        if (number % 10 == number / 10000)
-        {
-        a = "ДА";
-        }
-        if ((number / 10) % 10 == (number / 1000) % 10)
-        {
-        a = "ДА";
-        }
-        else a = "НЕТ";
-    
-    return a;
+var a = Math.Pow(i, 3);
+System.Console.Write($"{a} ");
+i++;
 }
-palindrome(number, a);
-//System.Console.WriteLine(palindrome);
