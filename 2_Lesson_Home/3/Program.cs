@@ -1,18 +1,27 @@
 ﻿// Задача 3:
 // Напишите программу, которая выводит третью цифру
 // заданного числа или сообщает, что третьей цифры нет.
- 
-System.Console.Write("Введите число: ");
-int a = int.Parse(Console.ReadLine());
-System.Console.Write("Введите количество цифр из которого состоит число : ");
-int b = int.Parse(Console.ReadLine());
 
-while  (b>3) 
-    {
-    a=a/10; 
-    b=b-1;
-    }
-    if (b==2|b==1) 
-    System.Console.WriteLine("в числе нет 3-его знака");
- else  System.Console.WriteLine(a%10);
- 
+// System.Console.Write("Введите число: ");
+// int a = int.Parse(Console.ReadLine());
+// System.Console.Write("Введите количество цифр из которого состоит число : ");
+// int b = int.Parse(Console.ReadLine());
+
+// while  (b>3) 
+//     {
+//     a=a/10; 
+//     b=b-1;
+//     }
+//     if (b==2|b==1) 
+//     System.Console.WriteLine("в числе нет 3-его знака");
+//  else  System.Console.WriteLine(a%10);
+
+Console.Write("Введите число: ");
+int a = int.Parse(Console.ReadLine());
+if (a < 100) 
+{
+Console.Write("Нет третьей цифры"); 
+return;
+}
+while (99 < a && a > 999) a = a / 10; Console.WriteLine(a % 10);
+
