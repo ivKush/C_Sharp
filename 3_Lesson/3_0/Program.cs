@@ -8,6 +8,7 @@ var s = Console.ReadLine();
 int a = s == null ? 0 : int.Parse(s);
 return a;
 }
+
 double Distance(int ax, int ay, int bx, int by)
 {
 double result;
