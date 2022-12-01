@@ -6,19 +6,19 @@ void Chet(int N)
 {
     int i = 0;
     double pere;
-    while (i < N )
+    while (i < N)
     {
         i += 1;
         if (i == (N))
         {
-        pere = Math.Pow(i,2);
-        Console.Write($"{pere}");
+            pere = Math.Pow(i, 2);
+            Console.Write($"{pere}");
         }
         else
         {
 
-        pere = Math.Pow(i,2);
-        Console.Write($"{pere},");
+            pere = Math.Pow(i, 2);
+            Console.Write($"{pere},");
         }
     }
 }

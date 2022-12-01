@@ -6,10 +6,10 @@
 System.Console.WriteLine("Введите число: ");
 var empty = Console.ReadLine();
 int N = empty == null ? 0 : int.Parse(empty);
-int i=1;
-while (N>=i)
+int i = 1;
+while (N >= i)
 {
-var a = Math.Pow(i, 3);
-System.Console.Write($"{a} ");
-i++;
+    var a = Math.Pow(i, 3);
+    System.Console.Write($"{a} ");
+    i++;
 }
