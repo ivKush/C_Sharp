@@ -5,6 +5,6 @@
 
 int A = int.Parse(Console.ReadLine());
 
-int c = 0;
-for (int i = 0, b; i < A; b = A % 10, A = A / 10, c = b + c) ;
-System.Console.WriteLine(c);
+int summ = 0;
+for (int i = 0, num; i < A; num = A % 10, A = A / 10, summ = num + summ) ;
+System.Console.WriteLine(summ);
