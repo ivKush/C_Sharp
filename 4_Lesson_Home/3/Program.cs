@@ -2,38 +2,23 @@
 //   случайными числами и выводит их на экран. Оформите заполнение массива и 
 //   вывод в виде функции (пригодится в следующих задачах).
 
-int nums = int.Parse(Console.ReadLine());
-int i = 0;
-for (int n = 0; n < nums; nums = nums / 10, i++);
- //   System.Console.Write(i);
-int[] Mass = new int [i];
-int s = 1;
-for (int z = 0 ; z < nums; Mass[Mass.Length - s] = nums % 10, nums = nums / 10, s++)
+int nums = new Random().Next(10000000, 100000000);
+//System.Console.WriteLine(nums);
+void OutMass(int nums)
 {
-System.Console.Write($"{Mass[s]} ");
+    int i = 0, n = 0, nums2 = nums;
+    while (n < nums)
+    {
+        nums = nums / 10;
+        i++;
+    }
+
+    int[] Mass = new int[i];
+    for (int z = 0, s = 1; z < nums2; Mass[i - s] = nums2 % 10, nums2 = nums2 / 10, s++) ;
+
+    for (int p = 0; p < Mass.Length; p++)
+    {
+        Console.Write($"{Mass[p]} ");
+    }
 }
-
-// int nums = int.Parse(Console.ReadLine());
-// int res = Metod4(nums);
-// Console.WriteLine(res);
-// string nums = Console.ReadLine();
-//     void OutMass(string nums)
-//     {
-//         // int[] numbers = new int[nums.Length];
-//         //int temp;
-//         for (int i = 0; i < nums.Length; i++)
-//             System.Console.Write();
-//     }
-
-// OutMass();
-//     {
-//         if (Int32.TryParse(args[i],out temp))
-//         {
-//             numbers[i] = temp;
-//         }
-//         else
-//         {
-//             numbers[i] = 0;
-//         }
-//      }
-//    }
+OutMass(nums);
