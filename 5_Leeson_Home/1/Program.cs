@@ -36,7 +36,7 @@ int SummEven(int[] arr)
     return count;
 }
 
-int[] arr_1 = CollMass(int.Parse(Console.ReadLine()));
-PrintMass(arr_1);
-System.Console.WriteLine(SummEven(arr_1));
+int[] ready = CollMass(int.Parse(Console.ReadLine()));
+PrintMass(ready);
+System.Console.WriteLine(SummEven(ready));
 
