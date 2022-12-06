@@ -1,6 +1,42 @@
-﻿//  https://docs.microsoft.com/en-us/dotnet/api/system.random.nextdouble?view=net-6.0
-//  https://ru.stackoverflow.com/questions/1254105/%D0%9A%D0%B0%D0%BA-%D1%81%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D0%BE%D0%B5-%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D0%B5-%D1%87%D0%B8%D1%81%D0%BB%D0%BE-%D0%B8%D0%B7-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D0%B0%D0%BB%D0%B0
+﻿
+// Задача 1: Задайте массив заполненный случайными
+// положительными трёхзначными числами. Напишите
+// программу, которая покажет количество чётных чисел в массиве.
 
-//  дабл - с окрулением до 2-х после запятой.
+// [345, 897, 568, 234] -> 2
 
+void PrintMass(int[] arr)
+{
+    int size = arr.Length;
+
+    for (int i = 0; i < size; i++)
+        Console.Write($"{arr[i]} ");
+    Console.WriteLine();
+}
+
+
+int[] CollMass(int size)
+{
+    int[] arr = new int[size];
+
+    for (int i = 0; i < size; i++)
+        arr[i] = new Random().Next(100, 1000);
+    return arr;
+}
+
+int SummEven(int[] arr)
+{
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] % 2 == 0)
+            count++;
+
+    }
+    return count;
+}
+
+int[] arr_1 = CollMass(int.Parse(Console.ReadLine()));
+PrintMass(arr_1);
+System.Console.WriteLine(SummEven(arr_1));
 
