@@ -3,6 +3,7 @@
 // Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29,
 // сумма отрицательных равна -20.
 
+
 void Print(int[] arr)
 {
     int size = arr.Length;
@@ -42,4 +43,3 @@ int[] arr_1 = MassNums(int.Parse(Console.ReadLine()),
                        int.Parse(Console.ReadLine()));
 Print(arr_1);
 SumPosNeg(arr_1);
-
