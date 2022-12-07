@@ -7,6 +7,6 @@
 int A = int.Parse(Console.ReadLine());
 int B = int.Parse(Console.ReadLine());
 int C = A;
-for (int i = 1; i < B; C = C * A, i++);
+for (int i = 1; i < B; C = C * A, i++) ;
 System.Console.Write(C);
 
