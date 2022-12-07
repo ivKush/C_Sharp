@@ -19,8 +19,8 @@ double[] CollMass(int size)
     double[] arr = new double[size];
     var rand = new Random();
 
-   for (int i = 0; i < size; i++)
-        arr[i] = Math.Round((rand.NextDouble() * (100+100) - 100), 2);
+    for (int i = 0; i < size; i++)
+        arr[i] = Math.Round((rand.NextDouble() * (100 + 100) - 100), 2);
     return arr;
 }
 
