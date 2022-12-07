@@ -26,7 +26,9 @@ int[] CollMass(int size)
 int NegPosSumm(int[] arr)
 {
     int sum = 0;
-    for (int i = 0; i < arr.Length; sum = arr[i] + sum, i += 2) ;
+    for (int i = 0; i < arr.Length; i += 2)
+        sum = arr[i] + sum;
+    //  sum += arr[i];
     return sum;
 }
 

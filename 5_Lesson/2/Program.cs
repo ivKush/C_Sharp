@@ -22,8 +22,8 @@ int[] Mass(int size)
 void Massiv(int[] arr_1)
 {
     for (int i = 0; i < arr_1.Length; i++)
+    //  arr_1[i] = arr_1[i] * -1;
         arr_1[i] = -arr_1[i];
-
 }
 
 int[] arr_1 = Mass(int.Parse(Console.ReadLine()));
