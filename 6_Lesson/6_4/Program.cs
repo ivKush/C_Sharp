@@ -2,7 +2,7 @@
 //    копию заданного массива с помощью поэлементного копирования.
 
 
-void Massiv(int[,] arr)
+void Print(int[,] arr)
 {
     int stolb = arr.GetLength(1);
     int raw = arr.GetLength(0);
@@ -15,7 +15,7 @@ void Massiv(int[,] arr)
     }
 }
 
-int[,] Print(int raw, int stolb)
+int[,] Massiv(int raw, int stolb)
 {
     int[,] arr = new int[raw, stolb];
 
@@ -25,20 +25,22 @@ int[,] Print(int raw, int stolb)
     return arr;
 }
 
-int[,] new_arr = new int[raw, stolb];
+int[,] MasClone(int[,] arr_1)
 {
-    int raw = arr.GetLength(0);
+    int raw = arr_1.GetLength(0);
+    int stolb = arr_1.GetLength(1);
+    int[,] new_arr = new int[raw, stolb];
     for (int i = 0; i < raw; i++)
     {
         for (int j = 0; j < stolb; j++)
-            new_arr[i, j] = arr[i, j];
+            new_arr[i, j] = arr_1[i, j];
     }
     return new_arr;
 }
 
-int[,] arr_1 = Print(int.Parse(Console.ReadLine()),
+int[,] arr_1 = Massiv(int.Parse(Console.ReadLine()),
                     int.Parse(Console.ReadLine()));
-Massiv(arr_1);
+Print(arr_1);
 int[,] arr_2 = MasClone(arr_1);
-Massiv(arr_2);
+Print(arr_2);
 
