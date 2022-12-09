@@ -39,8 +39,10 @@ int[,] MasClone(int[,] arr_1)
 }
 
 int[,] arr_1 = Massiv(int.Parse(Console.ReadLine()),
-                    int.Parse(Console.ReadLine()));
+                     int.Parse(Console.ReadLine()));
+System.Console.WriteLine();
 Print(arr_1);
 int[,] arr_2 = MasClone(arr_1);
+System.Console.WriteLine();
 Print(arr_2);
-
+System.Console.WriteLine();
