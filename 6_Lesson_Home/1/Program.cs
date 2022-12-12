@@ -5,14 +5,14 @@
 
 void PosiNums(string num)
 {
-int i = 0;
-string a = num;
-for (int n = 0; a != ""; a = Console.ReadLine())
-{
-    n = int.Parse(a);
-    if (n > 0) i++;
-}
-Console.WriteLine(i);
+    int i = 0;
+    string a = num;
+    for (int n = 0; a != ""; a = Console.ReadLine())
+    {
+        n = int.Parse(a);
+        if (n > 0) i++;
+    }
+    Console.WriteLine(i);
 }
 string n = Console.ReadLine();
 PosiNums(n);
