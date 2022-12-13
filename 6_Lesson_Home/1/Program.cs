@@ -16,3 +16,19 @@ void PosiNums(string num)
 }
 string n = Console.ReadLine();
 PosiNums(n);
+
+
+// int CountNum()
+// {
+//     int count = 0;
+//     string world;
+//     while (true)
+//     {
+//         Console.WriteLine("Output any number: ");
+//         world = Console.ReadLine();
+
+//         if (world == "") return count;
+//         else if (int.Parse(world) > 0) count += 1;
+//     }
+// }
+// Console.Write(CountNum());
