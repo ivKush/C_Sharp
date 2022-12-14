@@ -33,12 +33,12 @@ void PrintMass(int[,] arr)
         System.Console.WriteLine();
     }
 }
-string Itemposi(int[,] arr1, int pos1, int pos2)
+string Itemposi(int[,] arr1, int collRow, int collColumn)
 {
     for (int i = 0; i < arr1.GetLength(0); i++)
         for (int j = 0; j < arr1.GetLength(1); j++)
-            if (i == pos1 - 1 && j == pos2 - 1)
-                return $"{arr1[pos1 - 1, pos2 - 1]}";
+            if (i == collRow - 1 && j == collColumn - 1)
+                return $"{arr1[collRow - 1, collColumn - 1]}";
     return $"В данном массиве нет элемента с такой позицией";
 }
 
@@ -46,7 +46,7 @@ int[,] arr1 = CollMass(int.Parse(Console.ReadLine()),
                         int.Parse(Console.ReadLine()));
 PrintMass(arr1);
 System.Console.Write("Введите позицию элемента в строке: ");
-int pos1 = int.Parse(Console.ReadLine());
+int collRow = int.Parse(Console.ReadLine());
 System.Console.Write("Введите позицию элемента в столбце: ");
-int pos2 = int.Parse(Console.ReadLine());
-System.Console.WriteLine(Itemposi(arr1, pos1, pos2));
+int collColumn = int.Parse(Console.ReadLine());
+System.Console.WriteLine(Itemposi(arr1, collRow, collColumn));
