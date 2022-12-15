@@ -35,10 +35,10 @@ void PrintMass(int[,] arr)
 }
 string Itemposi(int[,] arr1, int collRow, int collColumn)
 {
-    for (int i = 0; i < arr1.GetLength(0); i++)
-        for (int j = 0; j < arr1.GetLength(1); j++)
-            if (i == collRow - 1 && j == collColumn - 1)
-                return $"{arr1[collRow - 1, collColumn - 1]}";
+
+    if (collRow < arr1.GetLength(0) && collColumn < arr1.GetLength(1))
+        // if (collRow != 0 && collColumn != 0)
+        return $"{arr1[collRow - 1, collColumn - 1]}";
     return $"В данном массиве нет элемента с такой позицией";
 }
 
