@@ -27,21 +27,45 @@ void PrintMass(int[,] arr)
     }
 }
 
-int[,] arr = new int[4, 4];
-arr = DNPTools.FillIntMatrix(arr, 0, 9);
-
-DNPTools.PrintArr(arr);
-
-(int, int) minIndex = (0, 0);
-for (int i = 0; i < arr.GetLength(0); i++)
-for (int j = 0; j < arr.GetLength(1); j++)
-if (arr[minIndex.Item1, minIndex.Item2] > arr[i, j]) minIndex = (i, j);
-for (int i = 0; i < arr.GetLength(0); i++)
+int[] MinEl(int[,] arr)
 {
-for (int j = 0; j < arr.GetLength(1); j++)
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
+    int min_num = arr[0, 0];
+    int[] indexes = new int[2];
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+            if (min_num > arr[i, j])
+            {
+                min_num = arr[i, j];
+                indexes[0] = i;
+                indexes[1] = j;
+            }
+    }
+    Console.WriteLine(arr[indexes[0], indexes[1]]);
+    return indexes;
+}
+
+void WithoutRowColumn(int[,] arr, int[] m_indexes)
 {
-if (i == minIndex.Item1 | j == minIndex.Item2) continue;
-Console.Write($"{arr[i, j]} ");
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
+    
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+            if (m_indexes[0] == i || m_indexes[1] == j) continue;
+            else Console.Write($"{arr[i, j],3}");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
 }
-Console.WriteLine();
-}
+
+int[,] arr1 = CollMass(int.Parse(Console.ReadLine()),
+                        int.Parse(Console.ReadLine()));
+PrintMass(arr1);
+
+int[] mass = MinEl(arr1);
+WithoutRowColumn(arr1, mass);
