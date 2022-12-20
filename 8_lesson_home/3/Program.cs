@@ -2,38 +2,67 @@
 
 // https://lfirmal.com/matritsyi-chastnyie-vidyi-matrits/#%D0%A3%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%86
 
-// int Factorial(int n)
-// {
-//  // 1! = 1
-//  // 0! = 1
-//  if(n == 1) return 1;
-//  else return n * Factorial(n-1);
-// }
-// Console.WriteLine(Factorial(5)); // 1 * 2 * 3 = 6
+// Задача 3: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+// Например, даны 2 матрицы:
+// 2 4 | 3 4
+// 3 2 | 3 3
+// Результирующая матрица будет:
+// 18 20
+// 15 18
 
-// Фибоначи с рекурсиуй
-
-int Fibonacci(int n)
+int[,] CollMass(int row, int column)
 {
-    if (n == 1 || n == 2) return 1;
-    else return Fibonacci(n - 1) + Fibonacci(n - 2);
-}
-for (int i = 1; i < 10; i++)
-{
-    Console.WriteLine(Fibonacci(i));
-}
-
-// 6.3. Не используя рекурсию, выведите первые N чисел Фибоначчи.
-//    Первые два числа Фибоначчи: 0 и 1.
-void Fibbonacci(int num)
-{
-    int a = 0, b = 1;
-    for (int i = 0; i < num; i++)
+    int[,] arr = new int[row, column];
+    var rand = new Random();
+    for (int i = 0; i < row; i++)
     {
-        Console.Write($"{a} ");
-        (a, b) = (b, a + b);
+        for (int j = 0; j < column; j++)
+        {
+            arr[i, j] = rand.Next(1, 10);
+        }
+    }
+    return arr;
+}
+
+void PrintMass(int[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            System.Console.Write($"{arr[i, j]}   ");
+        }
+        System.Console.WriteLine();
     }
 }
 
-int num = int.Parse(Console.ReadLine());
-Fibbonacci(num);
+
+int[,] Matrix2(int[,] arr1, int[,] arr2)
+{
+    int rowSize = arr1.GetLength(0);
+    int columnSize = arr1.GetLength(1);
+    int[,] multMatrix = new int[rowSize, columnSize];
+
+    if (rowSize != arr2.GetLength(0) || columnSize != arr2.GetLength(1)) return multMatrix;
+
+    for (int i = 0; i < rowSize; i++)
+    {
+        for (int j = 0; j < columnSize; j++)
+        {
+            multMatrix[i, j] = arr1[i, j] * arr2[i, j];
+        }
+    }
+    return multMatrix;
+}
+
+int[,] arr1 = CollMass(int.Parse(Console.ReadLine()),
+                        int.Parse(Console.ReadLine()));
+int[,] arr2 = CollMass(int.Parse(Console.ReadLine()),
+                        int.Parse(Console.ReadLine()));
+System.Console.WriteLine();
+PrintMass(arr1);
+System.Console.WriteLine();
+PrintMass(arr2);
+System.Console.WriteLine();
+PrintMass(Matrix2(arr1, arr2));
+
