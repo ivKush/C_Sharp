@@ -38,22 +38,26 @@ void ArrangeLine(int[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
-        int maxItem = arr[i, 0];
-        for (int j = 1; j < arr.GetLength(1); j++)
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
-            if (arr[i, j] > maxItem)
+            int maxItem = arr[i, j];
+            for (int n = j; n < arr.GetLength(1); n++)
             {
-                maxItem = arr[i, j];
-                (arr[i, 0], arr[i, j]) = (arr[i, j], arr[i, 0]);
+                if (arr[i, n] > maxItem)
+                {
+                    maxItem = arr[i, n];
+                    (arr[i, j], arr[i, n]) = (arr[i, n], arr[i, j]);
+                }
             }
-            // if (maxItem > arr[i])
         }
     }
 }
 
 int[,] arr1 = CollMass(int.Parse(Console.ReadLine()),
                         int.Parse(Console.ReadLine()));
+System.Console.WriteLine();
 PrintMass(arr1);
 System.Console.WriteLine();
 ArrangeLine(arr1);
 PrintMass(arr1);
+System.Console.WriteLine();
