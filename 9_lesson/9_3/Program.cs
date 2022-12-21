@@ -9,7 +9,3 @@ int Summ(int a)
 
 System.Console.WriteLine(Summ(453));
 
-
-
-
-
