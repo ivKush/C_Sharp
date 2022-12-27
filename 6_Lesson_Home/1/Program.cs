@@ -6,16 +6,30 @@
 void PosiNums(string num)
 {
     int i = 0;
-    string a = num;
-    for (int n = 0; a != ""; a = Console.ReadLine())
+    //string a = num;
+    for ( ; num != ""; num = Console.ReadLine())
     {
-        n = int.Parse(a);
+        int n = int.Parse(num);
         if (n > 0) i++;
     }
     Console.WriteLine(i);
 }
 string n = Console.ReadLine();
 PosiNums(n);
+
+// void PosiNums(string num)
+// {
+//     int i = 0;
+//     string a = num;
+//     for (int n = 0; a != ""; a = Console.ReadLine())
+//     {
+//         n = int.Parse(a);
+//         if (n > 0) i++;
+//     }
+//     Console.WriteLine(i);
+// }
+// string n = Console.ReadLine();
+// PosiNums(n);
 
 
 // int CountNum()
